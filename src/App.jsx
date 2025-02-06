@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import AboutUsPage from "./pages/AboutUsPage";
 import ServicesPage from "./pages/ServicesPage";
