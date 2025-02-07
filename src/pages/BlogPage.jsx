@@ -26,7 +26,7 @@ const BlogPage = () => {
       {blog.map((item, index) => {
         return (
           <div
-            className="w-full flex bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 border-2"
+            className="w-full flex flex-col sm:flex-row bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 border-2"
             key={index}
           >
             <div className="w-full ">
