@@ -37,7 +37,7 @@ const AboutUsPage = () => {
           >
             NeuroCort is a dynamic force at the crossroads of Artificial
             Intelligence, advanced IT solutions, web development, and digital
-            marketing, driving innovation for businesses navigating an
+            marketing, driving innovation for businesses navigating and
             ever-evolving digital landscape. We are more than a technology
             company; we are a visionary partner in building intelligent,
             adaptable, and forward-thinking systems that transform industries
