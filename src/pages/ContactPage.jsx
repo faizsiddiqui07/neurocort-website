@@ -59,8 +59,8 @@ const ContactPage = () => {
               Icon={IoMail}
               title="Email Us"
               description="You can send us your queries, and we’ll get back to you shortly."
-              linkText="Neurocort@gmail.com"
-              linkUrl="mailto:Neurocort@gmail.com"
+              linkText="neurocort@gmail.com"
+              linkUrl="mailto:neurocort@gmail.com"
             />
             <ContactCard
               Icon={FaLocationDot}
