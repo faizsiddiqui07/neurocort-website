@@ -8,7 +8,7 @@ let base_url = ''
 if (mode === production) {
     base_url = ''
 } else {
-    base_url = 'http://13.127.6.156:5000'
+    base_url = 'https://api.neurocort.com'
 }
 
 export {base_url}
