@@ -55,21 +55,24 @@ const SubscribeCard = () => {
     if (!validate()) return;
 
     try {
-      const response = await axios.post(`${base_url}/api/susbscribe`, data, {
+      const response = await axios.post(`${base_url}/api/subscribe`, data, {
         withCredentials: true,
       });
+      
 
       const responseData = response.data;
       
       if (responseData.success) {
         toast.success(responseData.message);
         setData({ email: "", phone: "" }); 
-      } else {
-        toast.error(responseData.message);
       }
     } catch (error) {
-      toast.error("An unexpected error occurred. Please try again.");
-      console.error("Subscription error:", error);
+      if (error.response && error.response.status === 400) {
+        toast.error(error.response.data.message);
+    } else {
+        toast.error("An unexpected error occurred. Please try again.");
+    }
+    // console.error("Subscription error:", error);
     }
   };
 

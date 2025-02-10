@@ -9,6 +9,7 @@ if (mode === production) {
     base_url = ''
 } else {
     base_url = 'https://api.neurocort.com'
+    // base_url = "http://localhost:5000"
 }
 
 export {base_url}
