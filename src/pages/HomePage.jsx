@@ -139,7 +139,7 @@ const HomePage = () => {
                   ))
               ) : (
                 <p className="text-gray-500 col-span-full text-center">
-                  No services available
+                  No services available.
                 </p>
               )}
             </div>
