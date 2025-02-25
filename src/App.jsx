@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Header />
         <Routes>
           <Route path="/" element={loading ? <Preloader /> : <HomePage />} />
