@@ -8,7 +8,7 @@ const NotFound = () => {
     <div className="h-screen flex items-center justify-center text-center">
       <div className='flex flex-col justify-center items-center'>
         <div className="">
-        <img src={notFoundImage} className='w-full' alt="" />
+        <img src={notFoundImage} loading='lazy' className='w-full' alt="Not Found" />
         </div>
         <Link
           to="/"

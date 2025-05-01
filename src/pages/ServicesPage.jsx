@@ -120,9 +120,7 @@ const ContactSection = ({ image, heading, subheading }) => (
         <Link
           to="/contact-us"
           onClick={scrollTop}
-          className="px-5 py-3 border-2 border-[#a0810e] bg-transparent 
-  hover:bg-[#a0810e] hover:text-white transition-all duration-300 text-lg rounded-sm"
-        >
+          className="px-5 py-3 border-2 border-[#a0810e] bg-transparent hover:bg-[#a0810e] hover:text-white transition-all duration-300 text-lg rounded-sm">
           Contact us
         </Link>
       </div>
