@@ -39,7 +39,7 @@ const Banner = () => {
 
 const Slide = ({ image, text }) => {
   return (
-    <div className="relative w-full h-[400px] xs:h-[500px] md:h-[600px] lg:h-[700px]">
+    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
       <img
         src={image}
         alt="Banner"
@@ -47,10 +47,12 @@ const Slide = ({ image, text }) => {
         loading="lazy"
       />
       {text && (
-        <div className="absolute bottom-5 left-14 bg-black/60 backdrop-blur-md px-4 py-2 rounded-md max-w-[90%]">
-          <h1 className="text-white  text-[1.3rem] sm:text-[1.75rem] md:text-[2.2rem] lg:text-[28px] font-medium">
-            {text}
-          </h1>
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center px-4 sm:px-8 w-full max-w-full">
+          <div className="bg-black/70 backdrop-blur-sm px-6 py-4 rounded-lg shadow-md">
+            <h1 className="text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug">
+              {text}
+            </h1>
+          </div>
         </div>
       )}
     </div>
