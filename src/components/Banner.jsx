@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import TypeIt from "typeit";
 
 import image1 from "../assets/images/firstBanner.webp";
 import image2 from "../assets/images/secondBanner.webp";
@@ -25,13 +24,13 @@ const Banner = () => {
         className="w-full"
       >
         <SwiperSlide>
-          <Slide image={image1} text="Neural Intelligence & Cortical Processing with AI Inspired by the Human Brain . . ." />
+          <Slide image={image1} text="Neural Intelligence & Cortical Processing with AI Inspired by the Human Brain..." />
         </SwiperSlide>
         <SwiperSlide>
-          <Slide image={image2} text="Where Artificial Intelligence meets Human Ingenuity to drive unparalleled Digital Transformation . . ." />
+          <Slide image={image2} text="Where Artificial Intelligence meets Human Ingenuity to drive unparalleled Digital Transformation..." />
         </SwiperSlide>
         <SwiperSlide>
-          <Slide image={image3} text="Revolutionizing Industries with AI, Machine Learning, and Next-Gen IT Architecture . . ." />
+          <Slide image={image3} text="Revolutionizing Industries with AI, Machine Learning, and Next-Gen IT Architecture..." />
         </SwiperSlide>
       </Swiper>
     </section>
@@ -39,41 +38,6 @@ const Banner = () => {
 };
 
 const Slide = ({ image, text }) => {
-  const typeRef = useRef(null);
-  const typeItInstance = useRef(null);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (mounted && typeRef.current) {
-      typeRef.current.innerHTML = "";
-
-      if (typeItInstance.current) {
-        typeItInstance.current.destroy();
-      }
-
-      typeItInstance.current = new TypeIt(typeRef.current, {
-        strings: [text],
-        speed: 20,
-        startDelay: 0,
-        lifeLike: true,
-        cursor: true,
-        loop: true,
-        afterComplete: () => {
-        },
-      }).go();
-    }
-
-    return () => {
-      if (typeItInstance.current) {
-        typeItInstance.current.destroy();
-      }
-    };
-  }, [mounted, text]);
-
   return (
     <div className="relative w-full h-[400px] xs:h-[500px] md:h-[600px] lg:h-[700px]">
       <img
@@ -82,11 +46,13 @@ const Slide = ({ image, text }) => {
         className="w-full h-full object-cover"
         loading="lazy"
       />
-      <div className="absolute bottom-5 mx-4 sm:mx-8 bg-black/50 backdrop-blur-md px-4 py-2 rounded-lg">
-        <h1 className="text-white text-[1.3rem] sm:text-[1.75rem] md:text-[2.2rem] lg:text-[28px]">
-          <span ref={typeRef}></span>
-        </h1>
-      </div>
+      {text && (
+        <div className="absolute bottom-5 left-14 bg-black/60 backdrop-blur-md px-4 py-2 rounded-md max-w-[90%]">
+          <h1 className="text-white  text-[1.3rem] sm:text-[1.75rem] md:text-[2.2rem] lg:text-[28px] font-medium">
+            {text}
+          </h1>
+        </div>
+      )}
     </div>
   );
 };
